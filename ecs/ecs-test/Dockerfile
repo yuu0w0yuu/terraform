@@ -1,11 +1,11 @@
-FROM node:22.14.0-alpine as base
+FROM node:22.14.0-alpine AS base
 
-FROM base as deps
+FROM base AS deps
 WORKDIR /build
 COPY package.json .
 RUN npm install
 
-FROM base as build
+FROM base AS build
 WORKDIR /build
 COPY --from=deps /build/node_modules ./node_modules
 COPY . .
