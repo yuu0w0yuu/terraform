@@ -1,6 +1,6 @@
 locals {
   provider = {
-    project_id = "PROJECT_ID"
+    project_id = "test-project-shirayama"
     region     = "asia-northeast1"
   }
 }
